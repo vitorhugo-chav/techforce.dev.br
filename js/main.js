@@ -7,7 +7,7 @@
  */
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Fade-in ao carregar a página
+  document.body.classList.remove("no-js");
   document.body.classList.add("page-fade-in");
 
   // Seleciona o formulário pelo ID

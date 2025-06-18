@@ -16,6 +16,9 @@ body.page-fade-in {
 body.page-fade-out {
   opacity: 0;
 }
+body.no-js {
+  opacity: 1 !important;
+}
 
 /* Particles.js container */
 #particles-js {
