@@ -1,0 +1,426 @@
+body {
+  background: #101213 !important;
+  font-family: "Share Tech Mono", "Fira Mono", "Roboto Mono", monospace;
+  color: #e0e6ed;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body.page-fade-in {
+  opacity: 1;
+}
+body.page-fade-out {
+  opacity: 0;
+}
+
+/* Particles.js container */
+#particles-js {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #101213;
+}
+
+/* Navbar */
+.navbar {
+  box-shadow: 0 2px 16px #00f0ff33;
+  background: rgba(24, 26, 27, 0.98) !important;
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid #00f0ff33;
+}
+.navbar-brand span {
+  letter-spacing: 2px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  color: #00f0ff;
+  text-shadow: 0 0 8px #00f0ff88;
+}
+.nav-link.active,
+.nav-link:focus {
+  color: #00f0ff !important;
+  text-shadow: 0 0 8px #00f0ff88;
+}
+.nav-link {
+  transition: color 0.2s;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.navbar .logo {
+  border-radius: 50%;
+  border: 2px solid #00f0ff44;
+  background: #101213;
+  box-shadow: 0 0 8px #00f0ff33;
+}
+
+/* Hero Section */
+.hero-full {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #101213 85%, #00f0ff05 100%);
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-full::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle at 60% 40%, #00f0ff22 0%, transparent 70%);
+  z-index: 0;
+  animation: heroGlow 6s infinite alternate;
+}
+@keyframes heroGlow {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hero-full .container {
+  position: relative;
+  z-index: 1;
+  background: rgba(24, 26, 27, 0.92);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 8px 32px #00f0ff22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1.display-4 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.1;
+}
+@media (min-width: 768px) {
+  h1.display-4 {
+    font-size: 4rem;
+  }
+}
+.neon-tech {
+  color: #fff;
+  text-shadow: 0 0 8px #fff, 0 0 16px #fff, 0 0 32px #00f0ff;
+}
+.neon-force {
+  color: #00f0ff;
+  text-shadow: 0 0 8px #00f0ff, 0 0 16px #00f0ff, 0 0 32px #00f0ff;
+}
+.glitch {
+  animation: glitch-flicker 2s infinite;
+}
+@keyframes glitch-flicker {
+  0%,
+  100% {
+    opacity: 1;
+    filter: none;
+  }
+  10% {
+    opacity: 0.7;
+    filter: blur(1px);
+  }
+  15% {
+    opacity: 0.4;
+    filter: blur(2px);
+  }
+  20% {
+    opacity: 1;
+    filter: none;
+  }
+  22% {
+    opacity: 0.8;
+    filter: blur(1px);
+  }
+  24% {
+    opacity: 1;
+    filter: none;
+  }
+  70% {
+    opacity: 1;
+    filter: none;
+  }
+  72% {
+    opacity: 0.6;
+    filter: blur(1px);
+  }
+  74% {
+    opacity: 1;
+    filter: none;
+  }
+}
+.hero-full .lead {
+  font-size: 1.5rem;
+  color: #b0eaff;
+  margin-bottom: 2rem;
+}
+.btn-destaque {
+  background: linear-gradient(90deg, #00f0ff, #00bcd4);
+  color: #181a1b;
+  font-weight: bold;
+  border-radius: 2rem;
+  padding: 0.75rem 2.5rem;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  box-shadow: 0 2px 16px #00f0ff33;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.btn-destaque:hover,
+.btn-destaque:focus {
+  background: linear-gradient(90deg, #00bcd4, #00f0ff);
+  color: #fff;
+  transform: scale(1.07);
+}
+
+/* Sobre mim */
+.section-card {
+  background: rgba(24, 26, 27, 0.93);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px #00f0ff22;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid #00f0ff11;
+  backdrop-filter: blur(2px);
+}
+.section-card h2 {
+  color: #00f0ff;
+  margin-bottom: 1.5rem;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+}
+.section-card,
+.section-card p,
+.section-card label,
+.section-card h2 {
+  color: #e0e6ed !important;
+}
+.profile-img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00f0ff;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 16px #00f0ff55;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.skill-icon {
+  font-size: 2.2rem;
+  color: #00f0ff;
+  background: #181a1b;
+  border-radius: 50%;
+  padding: 0.5rem 0.7rem;
+  box-shadow: 0 2px 8px #00f0ff22;
+  transition: transform 0.2s, color 0.2s;
+}
+.skill-icon:hover {
+  color: #fff;
+  transform: scale(1.15);
+}
+
+/* Projetos */
+#projetos .carousel-inner {
+  padding-bottom: 2rem;
+}
+#projetos .card {
+  border-radius: 1rem;
+  min-height: 260px;
+  background: linear-gradient(135deg, #181a1b 80%, #00f0ff11 100%);
+  color: #e0e6ed;
+  border: none;
+  box-shadow: 0 2px 12px #00f0ff22;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+#projetos .card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px #00f0ff44;
+}
+#projetos .card-title {
+  color: #00f0ff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+#projetos .card-img-top {
+  border-radius: 1rem 1rem 0 0;
+  height: 180px;
+  object-fit: cover;
+  background: #101213;
+}
+#projetos .btn-primary {
+  background: #00f0ff;
+  color: #181a1b;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  border: none;
+  transition: background 0.2s, color 0.2s;
+}
+#projetos .btn-primary:hover {
+  background: #00bcd4;
+  color: #fff;
+}
+
+/* Formulário */
+form .form-control {
+  background: #181a1b;
+  color: #e0e6ed;
+  border: 1px solid #222;
+  border-radius: 0.5rem;
+}
+form .form-control:focus {
+  border-color: #00f0ff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 240, 255, 0.2);
+  background: #181a1b;
+  color: #fff;
+}
+.btn-primary {
+  background: #00f0ff;
+  border: none;
+  color: #181a1b;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #00bcd4;
+  color: #fff;
+}
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border-color: #dc3545;
+}
+.was-validated .form-control:valid,
+.form-control.is-valid {
+  border-color: #00f0ff;
+}
+
+/* Social icons */
+.social-icons {
+  gap: 2rem;
+}
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #181a1b;
+  color: #e0e6ed;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  font-size: 2rem;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.icon-link:hover,
+.icon-link:focus {
+  transform: scale(1.15);
+  color: #fff;
+}
+.icon-link.whatsapp:hover,
+.icon-link.whatsapp:focus {
+  background: #25d366;
+  color: #fff;
+}
+.icon-link.instagram:hover,
+.icon-link.instagram:focus {
+  background: #e4405f;
+  color: #fff;
+}
+.icon-link.github:hover,
+.icon-link.github:focus {
+  background: #24292e;
+  color: #fff;
+}
+.icon-link::after {
+  display: none !important;
+}
+
+/* Footer */
+footer {
+  background: #181a1b;
+  border-top: 2px solid #00f0ff33;
+  box-shadow: 0 -2px 16px #00f0ff11;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.footer-link {
+  color: #b0eaff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.footer-link:hover,
+.footer-link:focus {
+  color: #00f0ff;
+  text-decoration: underline;
+}
+.copyright {
+  color: #b0eaff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Corrige a cor dos placeholders */
+.section-card ::placeholder,
+.section-card input::placeholder,
+.section-card textarea::placeholder {
+  color: #b0eaff !important;
+  opacity: 1;
+}
+
+/* Responsividade extra */
+@media (max-width: 767px) {
+  .hero-full .container,
+  .section-card {
+    padding: 1.2rem 0.5rem;
+  }
+  h1.display-4 {
+    font-size: 2.2rem;
+  }
+  #projetos .card-img-top {
+    height: 120px;
+  }
+  .skills-list {
+    gap: 0.7rem;
+  }
+  .profile-img {
+    width: 80px;
+    height: 80px;
+  }
+  .navbar {
+    font-size: 1rem;
+  }
+}
