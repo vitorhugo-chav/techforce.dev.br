@@ -1,0 +1,14 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "TechForce Portfolio",
+      "description": "Site portfolio pessoal desenvolvido com HTML, CSS e JavaScript. Apresenta projetos, habilidades e informações de contato.",
+      "technologies": ["HTML5", "CSS3", "JavaScript"],
+      "image": "assets/img/TechForce.png",
+      "demoUrl": "https://techforce.dev.br",
+      "githubUrl": "https://github.com/vitorhugo/techforce-portfolio",
+      "featured": true
+    }
+  ]
+}

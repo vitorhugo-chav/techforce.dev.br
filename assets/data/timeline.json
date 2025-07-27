@@ -1,0 +1,58 @@
+{
+  "timeline": [
+    {
+      "id": 1,
+      "title": "Análise e Desenvolvimento de Sistemas",
+      "description": "Instituto Federal do Mato Grosso Campus Primavera do Leste - Em andamento",
+      "year": "2024 - Presente",
+      "type": "education",
+      "icon": "🎓",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Fundador - TechForce",
+      "description": "Desenvolvimento de soluções tecnológicas e consultoria em software",
+      "year": "2025 - Presente",
+      "type": "work",
+      "icon": "🚀",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Analista de Redes N1",
+      "description": "Desenvolvimento de projetos para provedor de internet",
+      "year": "2020 - Presente",
+      "type": "work",
+      "icon": "🌐",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Certificação HTML5",
+      "description": "Curso completo de HTML pela OneBitCode",
+      "year": "2023",
+      "type": "certification",
+      "icon": "📜",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Certificação CSS3",
+      "description": "Curso completo de CSS pela OneBitCode",
+      "year": "2023",
+      "type": "certification",
+      "icon": "📜",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Certificação JS - Em andamento",
+      "description": "Curso completo de CSS pela OneBitCode",
+      "year": "2025 - Presente",
+      "type": "certification",
+      "icon": "📜",
+      "featured": true
+    }
+  ]
+}
