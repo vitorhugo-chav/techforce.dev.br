@@ -149,6 +149,7 @@ class ProjectsManager {
         // Atualizar filtro e re-renderizar
         this.currentFilter = e.target.dataset.filter;
         this.renderProjects();
+        this.setupCarousel();
       });
     });
   }
@@ -157,11 +158,25 @@ class ProjectsManager {
     const carousel = document.getElementById("projects-carousel");
     if (!carousel) return;
 
-    let currentSlide = 0;
     const slides = carousel.querySelectorAll(".carousel-slide");
+    if (slides.length === 0) return;
+
+    // Ativar o primeiro slide por padrão
+    slides[0].classList.add("active");
+
+    // Se houver apenas um slide, não criar navegação
+    if (slides.length <= 1) {
+      const existingNav = carousel.querySelector(".carousel-nav");
+      if (existingNav) existingNav.remove();
+      return;
+    }
+
+    let currentSlide = 0;
     const totalSlides = slides.length;
 
-    if (totalSlides <= 1) return;
+    // Limpar navegação antiga antes de criar uma nova
+    const oldNav = carousel.querySelector(".carousel-nav");
+    if (oldNav) oldNav.remove();
 
     // Criar navegação do carrossel
     const carouselNav = document.createElement("div");
