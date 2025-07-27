@@ -1,0 +1,43 @@
+{
+  "skills": {
+    "frontend": [
+      {
+        "name": "HTML5",
+        "level": "Avançado",
+        "icon": "🌐"
+      },
+      {
+        "name": "CSS3",
+        "level": "Avançado",
+        "icon": "🎨"
+      },
+      {
+        "name": "JavaScript",
+        "level": "Intermediário",
+        "icon": "⚡"
+      },
+      {
+        "name": "Bootstrap",
+        "level": "Intermediário",
+        "icon": "📱"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Git & GitHub",
+        "level": "Intermediário",
+        "icon": "📚"
+      },
+      {
+        "name": "VS Code",
+        "level": "Avançado",
+        "icon": "💻"
+      },
+      {
+        "name": "Figma",
+        "level": "Básico",
+        "icon": "🎨"
+      }
+    ]
+  }
+}
