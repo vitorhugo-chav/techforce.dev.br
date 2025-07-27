@@ -3,6 +3,7 @@ class ProjectsManager {
   constructor() {
     this.projects = [];
     this.currentFilter = "all";
+    this.autoPlayInterval = null;
     this.init();
   }
 
@@ -12,6 +13,7 @@ class ProjectsManager {
       this.renderProjects();
       this.setupFilters();
       this.setupCarousel();
+      this.setupVisibilityChange();
     } catch (error) {
       console.error("Erro ao carregar projetos:", error);
       this.showError();
@@ -236,9 +238,26 @@ class ProjectsManager {
   }
 
   startAutoPlay() {
-    setInterval(() => {
+    if (this.autoPlayInterval) {
+      clearInterval(this.autoPlayInterval);
+    }
+    this.autoPlayInterval = setInterval(() => {
       this.changeSlide(1);
     }, 5000); // Mudar slide a cada 5 segundos
+  }
+
+  stopAutoPlay() {
+    clearInterval(this.autoPlayInterval);
+  }
+
+  setupVisibilityChange() {
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        this.stopAutoPlay();
+      } else {
+        this.startAutoPlay();
+      }
+    });
   }
 
   showError() {

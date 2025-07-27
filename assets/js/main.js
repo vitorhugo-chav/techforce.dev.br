@@ -13,9 +13,21 @@ function initMain() {
   // Atualizar ano no footer
   updateFooterYear();
 
-  // Smooth scroll para links de navegação
-  const navLinks = document.querySelectorAll('nav a[href^="#"]');
-  navLinks.forEach((link) => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinksContainer = document.getElementById("nav-links");
+
+  // Função para alternar a visibilidade do menu de navegação
+  function toggleMenu() {
+    navLinksContainer.classList.toggle("active");
+    menuToggle.classList.toggle("active"); // Adiciona/remove classe do ícone
+  }
+
+  // Adicionar evento de clique ao botão do menu
+  menuToggle.addEventListener("click", toggleMenu);
+
+  // Smooth scroll e fechar menu ao clicar no link
+  const allNavLinks = document.querySelectorAll('nav a[href^="#"]');
+  allNavLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const targetId = link.getAttribute("href");
@@ -27,19 +39,23 @@ function initMain() {
           block: "start",
         });
       }
+
+      // Fecha o menu se estiver aberto (em modo mobile)
+      if (navLinksContainer.classList.contains("active")) {
+        toggleMenu();
+      }
     });
   });
 
   // Adicionar classe active ao link de navegação baseado na seção visível
   function updateActiveNavLink() {
     const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
     let currentSection = "";
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
 
       if (window.pageYOffset >= sectionTop - 200) {
         currentSection = section.getAttribute("id");

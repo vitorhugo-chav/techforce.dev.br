@@ -50,29 +50,59 @@
 
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="icon" type="image/x-icon" href="assets/img/TechForce.png" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Vitor Hugo",
+        "url": "https://techforce.dev.br/",
+        "jobTitle": "Desenvolvedor de Software",
+        "knowsAbout": ["HTML", "CSS", "JavaScript", "Desenvolvimento Web"],
+        "image": "https://techforce.dev.br/assets/img/TechForce-Logo-NoBackground.png",
+        "sameAs": [
+          "https://github.com/vitorhugo-chav",
+          "https://www.linkedin.com/in/vitor-hugo-a68155259"
+        ]
+      }
+    }
+    </script>
   </head>
   <body>
     <!-- Partículas de fundo -->
     <div id="particles-container"></div>
 
     <!-- Navbar -->
-    <nav>
-      <ul>
-        <li>
-          <a href="#"
-            ><img
-              src="assets/img/TechForce-Logo-NoBackground.png"
-              alt="Logo TechForce"
-              width="60"
-            />TECHFORCE</a
+    <nav id="navbar">
+      <div class="nav-wrapper">
+        <a href="#hero" class="brand-logo">
+          <img
+            src="assets/img/TechForce-Logo-NoBackground.png"
+            alt="Logo TechForce"
+          />
+          <span>TECHFORCE</span>
+        </a>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 0 24 24"
+            width="24px"
+            fill="currentColor"
           >
-        </li>
-        <li><a href="#aboutme">Sobre Mim</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#experience">Experiência</a></li>
-        <li><a href="#projects">Projetos</a></li>
-        <li><a href="#contact">Contato</a></li>
-      </ul>
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#aboutme">Sobre Mim</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#experience">Experiência</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Hero -->
@@ -175,7 +205,7 @@
       <div class="contact-container">
         <div class="contact-info">
           <div class="contact-item">
-            <a href="mailto:vitor.hcf2021@protonmail.com" target="_blank">
+            <a href="mailto:vitor.hcf2021@protonmail.com" target="_blank" aria-label="Enviar Email">
               <div class="contact-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path
@@ -194,6 +224,7 @@
               href="https://wa.me/5566984329906"
               target="_blank"
               rel="noopener"
+              aria-label="Enviar mensagem no WhatsApp"
             >
               <div class="contact-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -213,6 +244,7 @@
               href="https://www.linkedin.com/in/vitor-hugo-a68155259"
               target="_blank"
               rel="noopener"
+              aria-label="Ver perfil no LinkedIn"
             >
               <div class="contact-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -232,6 +264,7 @@
               href="https://github.com/vitorhugo-chav"
               target="_blank"
               rel="noopener"
+              aria-label="Ver perfil no GitHub"
             >
               <div class="contact-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor">
@@ -371,11 +404,11 @@
       </div>
     </footer>
 
-    <script src="assets/js/particles.min.js"></script>
-    <script src="assets/js/particles-config.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/projects.js"></script>
-    <script src="assets/js/timeline.js"></script>
-    <script src="assets/js/skills.js"></script>
+    <script src="assets/js/particles.min.js" defer></script>
+    <script src="assets/js/particles-config.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/projects.js" defer></script>
+    <script src="assets/js/timeline.js" defer></script>
+    <script src="assets/js/skills.js" defer></script>
   </body>
 </html>
