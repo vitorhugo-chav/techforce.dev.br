@@ -291,7 +291,12 @@
           </div>
         </div>
 
-        <form action="#" method="POST" class="contact-form">
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/mwpneere"
+          method="POST"
+          class="contact-form"
+        >
           <div class="form-group">
             <label for="name">Nome</label>
             <input
@@ -331,6 +336,7 @@
             ></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+          <p id="form-status" style="margin-top: 1rem;"></p>
         </form>
       </div>
     </section>
@@ -420,5 +426,6 @@
     <script src="assets/js/projects.js" defer></script>
     <script src="assets/js/timeline.js" defer></script>
     <script src="assets/js/skills.js" defer></script>
+    <script src="assets/js/form-handler.js" defer></script>
   </body>
 </html>
